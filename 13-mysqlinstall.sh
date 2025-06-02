@@ -35,6 +35,23 @@ fi
 #     echo "Installing MySQL ... SUCCESS"
 # fi
 
+dnf list installed mysql
+
+if [ $? -ne 0 ]
+then # not installed
+    dnf install git -y
+    if [ $? -ne 0 ]
+    then 
+        echo "Installing git ... FAILURE"
+        exit 1
+    else
+        echo "Installing git ... SUCCESS"
+    fi
+else    
+    echo "git is already ... INSTALLED"
+fi
+
+
 # dnf install git -y
 
 # if [ $? -ne 0 ]

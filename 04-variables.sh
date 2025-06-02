@@ -8,3 +8,5 @@ echo "username enterd: $USERNAME"
 echo "Please enter your password::" # text entered here will be added as value to variable
 read -s PASSWORD
 echo "please enter your pswd: $PASSWORD"
+
+ech0 "username is:  $($USERNAME) & pswd is : $($PASSWORD)" 

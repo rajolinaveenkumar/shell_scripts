@@ -10,22 +10,37 @@ else
     echo "Script name: $0 is executing....."
 fi 
 
-dnf install mysql -y
+dnf list installed mysql
 
 if [ $? -ne 0 ]
-then 
-    echo "Installing MySQL ... FAILURE"
-    exit 1
+then # not installed
+    dnf install mysql -y
+    if [ $? -ne 0 ]
+    then 
+        echo "Installing MySQL ... FAILURE"
+        exit 1
+    else
+        echo "Installing MySQL ... SUCCESS"
+    fi
 else
-    echo "Installing MySQL ... SUCCESS"
+    echo "MySQL is already ... INSTALLED"
 fi
 
-dnf install git -y
+# dnf install mysql -y
+# if [ $? -ne 0 ]
+# then 
+#     echo "Installing MySQL ... FAILURE"
+#     exit 1
+# else
+#     echo "Installing MySQL ... SUCCESS"
+# fi
 
-if [ $? -ne 0 ]
-then
-    echo "Installing git ... FAILURE"
-    exit 1
-else
-    echo "Installing git ... SUCCESS"
-fi
+# dnf install git -y
+
+# if [ $? -ne 0 ]
+# then
+#     echo "Installing git ... FAILURE"
+#     exit 1
+# else
+#     echo "Installing git ... SUCCESS"
+# fi

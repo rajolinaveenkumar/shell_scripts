@@ -5,4 +5,4 @@ echo "First name: ${Names[0]}"
 echo "Second name: ${Names[1]}"
 echo "Third name: ${Names[2]}"
 
-echo "All name are: ${Names[@]}"
+echo "All names are: ${Names[@]}"

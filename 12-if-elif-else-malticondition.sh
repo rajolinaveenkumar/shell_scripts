@@ -1,5 +1,5 @@
 #!/bin/bash
-num=69
+num=79
 
 if [ $num -gt 100 ]; then
     echo "Greater than 100"

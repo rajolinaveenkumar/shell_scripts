@@ -1,4 +1,4 @@
-file="/home/ec2-user/shell_scripts/19-install-with-loops.sh"
+file="/home/ec2-user/shell_scripts/07-arrays.sh"
 
 while read -r line
 do

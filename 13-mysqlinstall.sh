@@ -10,7 +10,7 @@ else
     echo "Script name: $0 is executing....."
 fi 
 
-dnf list installed mysql
+dnf list installed git
 
 if [ $? -ne 0 ]
 then # not installed

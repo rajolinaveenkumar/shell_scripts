@@ -20,7 +20,7 @@ then
     echo -e "ERROR:: $UL You must have sudo access to execute this script $N"
     exit 1 # other than 0
 else 
-    echo -e "$BOLD Script name: $0 is executing..... $N"
+    echo -e "$G Script name: $0 is executing..... $N"
 fi
 
 dnf list installed mysql
@@ -29,5 +29,5 @@ then
     dnf install mysql -y
     VALIDATE $? "MYSQL"
 else
-    echo -e "$BOLD MySQL is already ... INSTALLED $N" 
+    echo -e "$Y MySQL is already ... INSTALLED $N" 
 fi 

@@ -31,3 +31,13 @@ then
 else
     echo -e "$Y MySQL is already ... INSTALLED $N" 
 fi 
+
+dnf list installed git
+
+if [ $? -ne 0 ]
+then
+    dnf install git -y
+    VALIDATE $? "Git"
+else
+    echo -e "$Y Git is already ...  INSTALLED $N"
+fi

@@ -9,9 +9,9 @@ UL="\e[4m"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e ""
+        echo -e "$R Installing $2 is ............FAILURE $N"
     else
-        echo -e ""
+        echo -e "$G Installing $2 is ............SUCCESS $N"
     fi
 }
 
@@ -22,3 +22,11 @@ then
 else 
     echo -e "$BOLD Script name: $0 is executing..... $N"
 fi
+
+dnf list installed mysql
+if [ $? -ne 0 ]
+then 
+    dnf install mysql -y
+    VALIDATE $? "MYSQL"
+else
+    echo -e "$BOLD MySQL is already ... INSTALLED $N"  

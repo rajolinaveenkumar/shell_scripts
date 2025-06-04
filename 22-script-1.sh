@@ -8,4 +8,5 @@ echo "$PERSON1: How are you man"
 echo "$PERSON2 : I am good, what about you"
 echo "$PERSON1: Where is $person3"
 
+echo "hello"
 CHECK

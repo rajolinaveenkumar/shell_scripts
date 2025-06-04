@@ -4,7 +4,7 @@ PERSON2=Suresh
 person3=mahesh
 
 CHECK(){
-    if [ $? -e 0 ]
+    if [ $? -eq 0 ]
     then 
         echo "calling from script-2"
     fi 

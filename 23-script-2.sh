@@ -4,8 +4,8 @@ PERSON2=Suresh
 person3=mahesh
 
 CHECK(){
-if [ $? -ne 0 ]
-then 
-    echo "calling from script-2"
-fi 
+    if [ $? -e 0 ]
+    then 
+        echo "calling from script-2"
+    fi 
 }
